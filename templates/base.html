@@ -1,0 +1,16 @@
+<html>
+    <head>
+      <title>{{ title }} - Home</title>
+    </head>
+    <body>
+        <ul>
+          <li><a href="/books/">Home</a></li>
+          <li><a href="/books/new">Add a new book</a></li>
+          <li><a href="/books/remove">Remove a book</a></li>
+        </ul>
+        <hr>
+        {% block content %} 
+
+        {% endblock %}
+    </body>
+</html>
