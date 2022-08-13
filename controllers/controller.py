@@ -16,6 +16,7 @@ def show(index):
     book_to_show = books[int(index)]
     return render_template('show.html',book=book_to_show)
 
+#add new book
 @app.route('/books/new')
 def new():
     return render_template('new.html')
@@ -25,17 +26,13 @@ def create():
     title = request.form['title']
     author = request.form['author']
     genre = request.form['genre']
-    new_book = Book(title,author,genre,True)
+    new_book = Book(title,author,genre,False)
     books.append(new_book)
     return redirect('/books')
 
-# @app.route('/books/remove')
-# def delete():
-#     return render_template('remove.html')
-
+#remove book
 @app.route('/books/remove/<title>', methods=['POST'])
 def remove(title):
-    # title = request.form['title']
     book_to_delete = None
     for book in books:
         if book.title == title:
@@ -43,3 +40,36 @@ def remove(title):
             break
     books.remove(book_to_delete)
     return redirect('/books')
+    
+#Check out book
+@app.route('/books/check_out/<title>', methods =['POST'])
+def check_out(title):
+    book_to_update = None
+    for book in books:
+        if book.title == title:
+            book_to_update = book
+            break
+    book.checked_out = True
+    return redirect('/books')
+
+#Check in book
+@app.route('/books/check_in/<title>', methods =['POST'])
+def check_in(title):
+    book_to_update = None
+    for book in books:
+        if book.title == title:
+            book_to_update = book
+            break
+    book.checked_out = False
+    return redirect('/books')
+
+
+#Unused option - create a page with all books to check out, but how to update the /books page?
+# @app.route('/books/check_out')
+# def check_out():
+#     return render_template('check_out.html', books=books)
+
+#not used for the delete function
+# @app.route('/books/remove')
+# def delete():
+#     return render_template('remove.html')

@@ -10,9 +10,8 @@ ul > a {
     font-size: large;
     position: relative;
     top: 5px;
-    margin-left: 10px;
     padding: 5px;
-    border:2px solid rgb(252, 251, 254);
+    border:2px solid rgb(31, 4, 4);
     background-color: bisque;
 }
 

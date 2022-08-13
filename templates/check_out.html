@@ -1,0 +1,33 @@
+<!-- Don't need as found another solution-->
+
+<!-- {% extends "base.html" %}
+
+{% block content%}
+  <h1>Check Out Books</h1>
+  <div class="book-container">
+  {% for book in books %}  
+  <div class="book">
+    <h2>
+      <a href="/books/{{loop.index0}}">{{ book.title }}</a> 
+    </h2>
+    <p>
+        <b>Author : {{ book.author }}</b> 
+    </p>
+    <p>
+        Genre : {{ book.genre}}
+    </p>
+    <p>
+        Checked out : {{ book.checked_out}}
+    </p>
+    <form action='/books', method="POST">
+        <label for="checked_out">Check Out?</label>
+        <!-- <input type="checkbox" name="checked_out" id="checked_out" value="False"> -->
+        <input type="submit" name = checked_out value="Check Out">
+    </form>
+  </div>
+  {% endfor %}
+  </div>
+{%endblock%} -->
+
+
+
