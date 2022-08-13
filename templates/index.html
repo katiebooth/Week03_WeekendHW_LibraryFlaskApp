@@ -2,8 +2,9 @@
 
 {% block content%}
   <h1>Library Books</h1>
+  <div class="book-container">
   {% for book in books %}  
-  <div>
+  <div class="book">
     <h2>
       <a href="/books/{{loop.index0}}">{{ book.title }}</a> 
     </h2>
@@ -13,6 +14,10 @@
     <p>
         Genre : {{ book.genre}}
     </p>
+    <form class="form-inline" action="/books/remove/{{ book.title }}" method="POST">
+        <input type="submit" value="Remove">
+    </form>
   </div>
   {% endfor %}
+  </div>
 {%endblock%}

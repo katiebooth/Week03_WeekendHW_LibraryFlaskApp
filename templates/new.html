@@ -1,14 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <form action="/books" method="post"> 
-      <label for="title_input">Title</label>
-      <input type="text" name="title" id="title_input">
-      <label for="author_input">Author</label>
-      <input type="text" name="author" id="author_input">
-      <label for="genre_input">Genre</label>
-      <input type="text" name="genre" id="genre">
-      <input type="submit" value="Add Book">
+<div class="center">
+    <h1>Add a new book to the library</h1>
+    <form action="/books" method="post">
+      <div class="inputbox">
+        <input type="text" name="title" id="title_input" required="required">
+        <span>Title</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" name="author" id="author_input" required="required">
+        <span>Author</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" name="genre" id="genre_input"required="required">
+        <span>Genre</span>
+      </div>
+      <div class="inputbox">
+        <input type="submit" value="Add Book">
+      </div>
     </form>
-
+  </div>
 {% endblock %}
+
+

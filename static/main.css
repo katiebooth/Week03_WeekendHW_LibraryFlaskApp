@@ -1,0 +1,97 @@
+body {
+    background-color: #ceb0e3;
+    margin: 10px
+  }
+
+h1 {
+    color: rgb(48, 20, 96);
+  }
+
+h2 {
+    color: rgb(71, 49, 107);
+  }
+
+p {
+    color: rgb(71, 49, 107);
+  }
+
+.book-container { /* create a "container for the book boxes*/
+    display: flex; /*puts the book boxes in rows rather than one column i.e. "wraps" them*/
+    flex-wrap: wrap; /*puts the boxes onto two lines once one line is full*/
+}
+
+.book {
+    display: flex; /*puts the book boxes into the container */
+    flex-direction: column; /*aligns the items in the box in column*/
+    width: 20vw;
+    background-color: #ffffff;
+    padding: 2px; /*space within the boxes between items and border*/
+    margin: 15px; /*space between the boxes*/
+    border : 5px solid black;
+    text-align: center;
+    align-items : center; /*vertical alignment within box*/
+    justify-content : center; /*horizonal alignment within box*/
+    }
+
+/*style the input form*/
+.center {
+    position: relative;
+    padding: 5px 5px;
+    background: #fff;
+    border : 5px solid black;
+    border-radius: 5px;
+    width: 310px;
+    }
+.center h1 {
+    font-size: 1.3em;
+    padding: 1px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding-left: 10px;
+    font-family: 'sans-serif';
+    }
+.center .inputbox {
+    position: relative;
+    justify-content:center;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 20px;
+    }
+.center .inputbox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid #000;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    }
+.center .inputbox:last-child {
+    margin-bottom: 0;
+    }
+.center .inputbox span {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    font-size: 1em;
+    transition: 0.6s;
+    }
+.center .inputbox input:focus ~ span,
+.center .inputbox input:valid ~ span {
+    transform: translateX(-13px) translateY(-35px);
+    font-size: 1em;
+    }
+    .center .inputbox [type="submit"] {
+    width: 100%;
+    background: rgb(84, 9, 116);
+    color: #fff;
+    border: #fff;
+    }
+.center .inputbox:hover [type="submit"] {
+    background: rgb(178, 25, 145);
+    }
