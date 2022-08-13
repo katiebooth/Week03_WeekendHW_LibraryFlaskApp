@@ -1,7 +1,7 @@
 body {
     background-image: url("library_image.jpg");
     background-size: contain;
-    background-color : rgb(236, 150, 217);
+    background-color : rgb(56, 4, 4);
     margin: 10px;
   }
 
@@ -109,3 +109,17 @@ p {
 .center .inputbox:hover [type="submit"] {
     background: rgb(183, 88, 88);
     }
+
+.form-inline {
+    border: 1px solid black
+}
+
+.form-inline input {
+    color: white;
+    background: rgb(56, 4, 4);
+    /* background : rgb(183, 88, 88); */
+}
+
+.form-inline input:hover {
+    background : rgb(183, 88, 88);
+}
