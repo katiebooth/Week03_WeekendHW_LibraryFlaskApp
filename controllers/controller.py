@@ -25,7 +25,7 @@ def create():
     title = request.form['title']
     author = request.form['author']
     genre = request.form['genre']
-    new_book = Book(title,author,genre)
+    new_book = Book(title,author,genre,True)
     books.append(new_book)
     return redirect('/books')
 

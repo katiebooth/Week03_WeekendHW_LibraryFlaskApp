@@ -1,18 +1,32 @@
 body {
-    background-color: #ceb0e3;
-    margin: 10px
+    background-image: url("library_image.jpg");
+    background-size: contain;
+    background-color : rgb(236, 150, 217);
+    margin: 10px;
   }
 
+ul > a {
+    color: rgb(31, 4, 4);
+    font-size: large;
+    position: relative;
+    top: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    border:2px solid rgb(252, 251, 254);
+    background-color: bisque;
+}
+
 h1 {
-    color: rgb(48, 20, 96);
+    color: rgb(252, 251, 254);
+    font-size: 3em
   }
 
 h2 {
-    color: rgb(71, 49, 107);
+    color: rgb(31, 4, 4);
   }
 
 p {
-    color: rgb(71, 49, 107);
+    color: rgb(80, 19, 19);
   }
 
 .book-container { /* create a "container for the book boxes*/
@@ -23,10 +37,10 @@ p {
 .book {
     display: flex; /*puts the book boxes into the container */
     flex-direction: column; /*aligns the items in the box in column*/
-    width: 20vw;
-    background-color: #ffffff;
-    padding: 2px; /*space within the boxes between items and border*/
-    margin: 15px; /*space between the boxes*/
+    width: 18vw;
+    background-color: bisque;
+    padding: 0px; /*space within the boxes between items and border*/
+    margin: 10px; /*space between the boxes*/
     border : 5px solid black;
     text-align: center;
     align-items : center; /*vertical alignment within box*/
@@ -37,7 +51,7 @@ p {
 .center {
     position: relative;
     padding: 5px 5px;
-    background: #fff;
+    background: bisque;
     border : 5px solid black;
     border-radius: 5px;
     width: 310px;
@@ -46,7 +60,7 @@ p {
     font-size: 1.3em;
     padding: 1px;
     text-align: center;
-    color: #000;
+    color: rgb(56, 4, 4);
     margin-bottom: 10px;
     font-weight: bold;
     padding-left: 10px;
@@ -69,6 +83,7 @@ p {
     background: none;
     padding: 10px;
     border-radius: 10px;
+    color :black;
     font-size: 1em;
     }
 .center .inputbox:last-child {
@@ -88,10 +103,10 @@ p {
     }
     .center .inputbox [type="submit"] {
     width: 100%;
-    background: rgb(84, 9, 116);
-    color: #fff;
+    background: rgb(56, 4, 4);
+    color: white;
     border: #fff;
     }
 .center .inputbox:hover [type="submit"] {
-    background: rgb(178, 25, 145);
+    background: rgb(183, 88, 88);
     }
