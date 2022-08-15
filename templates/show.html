@@ -5,7 +5,13 @@
     <h2>{{book.title}}</h2>
     <b><p>Author : {{book.author}}</p></b>
     <p>Genre : {{book.genre}}</p>
-    <p>Checked Out? : {{book.checked_out}}</p>
+    <p>Checked Out:
+        {% if book.checked_out %}
+        <span> &#9989;</span>
+        {% else %}
+        <span>&#10060;</span>
+        {% endif %}
+    </p>
 </div>
 {% endblock %}
 </div>
